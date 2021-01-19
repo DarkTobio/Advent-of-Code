@@ -1,0 +1,28 @@
+#2 - 1
+
+letras = ["a","b","c","d"]
+claves = ["batata","babatabbba","cccccc","eduardo"]
+max = [4,3,10,1]
+
+contador = [] #cuenta q repeticiones de la letra
+validador = [] #compara q repeticiones con el max
+
+for elements in range(0,len(letras)):
+  #print(claves[elements].count(letras[elements]))
+  contador.append(claves[elements].count(letras[elements]))
+  #print(claves.count(elements))
+  #print(contador)
+
+for elements in range(0,len(contador)):
+  if contador[elements] > max[elements]:
+    validador.append(0)
+  else:
+    validador.append(1)
+
+print("repeticiones de letra    ",contador)
+print("max aparicion de la letra", max)
+print("cumpla o no (1/0)        ",validador)
+
+respuesta = sum(validador)
+
+print("total de claves que cumplen:",respuesta)
